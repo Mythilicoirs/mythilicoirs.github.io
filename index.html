@@ -12,11 +12,12 @@
   </head>
   <!--    background-image: url('/Users/np/Desktop/website/photo_website/blur_bg.jpeg      --> 
   <body style="background-color:rgb(241, 237, 214);">
-       <div class="topnav">
+       <div class="topnav" id="myNavbar">
             <a class="active" href="#logo"> MYTHILI COIRS </a>
             <a href="#about">About us</a>
             <a href="#contact">Contact us</a>
             <a href="#products">Products</a>
+            <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
         </div> 
           <img align= iddle src="photo_website/namewithimage.jpeg " alt="front view" style="width:100%;height:100%;"> 
         <h2 style="text-align:center"> Products </h2>
@@ -205,6 +206,14 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+function menu() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
 
 
